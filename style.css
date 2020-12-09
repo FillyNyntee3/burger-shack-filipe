@@ -3,12 +3,14 @@
 /* CSS Variables */
 :root {
   --main-color: #ffb340;
+  --background-color: #fff4e4;
+  --text-color-1: #b36614;
 }
 
 body {
   font-size: 66.7%;
   font-family: "Josefin Sans", sans-serif;
-  color: black;
+  background-color: var(--background-color);
 }
 
 * {
@@ -39,7 +41,7 @@ body {
   text-decoration: none;
   font-size: 1.15rem;
   text-transform: uppercase;
-  color: #b36614;
+  color: var(--text-color-1);
 }
 
 .header__list--item a:hover {
@@ -51,42 +53,43 @@ body {
   width: 6.2rem;
 }
 
-.carousel-container {
-  height: 86vh;
+#meals-section {
+  width: 90vw;
+  margin: 4rem auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.carousel__slides {
+.carousel {
+  background-color: black;
+  border-radius: 10px;
+  height: 60vh;
+  width: 60vw;
+  margin-right: 1.5rem;
+}
+
+.stories {
   display: flex;
-  /* background-color: black; */
-  height: 80vh;
-  width: 95vw;
-  margin: 1rem auto;
-  border-radius: 3px;
+  flex-direction: column;
+  width: 30vw;
+  height: 60vh;
 }
 
-.carousel__item {
-  width: 100%;
+.story {
+  width: 90%;
+  height: 33%;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  font-size: 2rem;
+  color: var(--text-color-1);
+  text-align: left;
 }
 
-.carousel__item--1 {
-  background: center / cover
-    url("https://images.pexels.com/photos/4353083/pexels-photo-4353083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+.story h2 {
+  margin-bottom: 1rem;
 }
 
-.carousel__item--2 {
-  background: center / cover
-    url("https://images.pexels.com/photos/1556698/pexels-photo-1556698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+.story p {
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 0.9rem;
 }
-
-.carousel__item--3 {
-  background: center / cover
-    url("https://images.pexels.com/photos/3625372/pexels-photo-3625372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
-
-/* .carousel__item img {
-  object-fit: contain;
-  background-position: top;
-} */
