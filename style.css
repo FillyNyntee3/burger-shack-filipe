@@ -69,14 +69,16 @@ body {
   position: relative;
 }
 
-.meal a {
+.meal a,
+.feature a {
   text-decoration: none;
   color: var(--main-color);
   padding: 0.07rem 0.4rem;
   transition: all 0.1s;
 }
 
-.meal a:hover {
+.meal a:hover,
+.feature a:hover  {
   background-color: var(--main-color);
   color: white;
 }
@@ -145,17 +147,19 @@ body {
 }
 
 #meals-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1rem;
   width: 80vw;
   height: 100vh;
-  background-color: black;
-  margin: 3rem auto;
+  margin: 4rem auto;
 }
 
 #meals-section .meal,
 #meals-section .feature {
   width: 40vw;
-  height: 45vh;
+  height: 100%;
   margin: 0.5rem;
 }
 
@@ -173,6 +177,11 @@ body {
 }
 
 .feature__item--1 {
+  background-image: url('https://images.pexels.com/photos/357553/pexels-photo-357553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+}
+
+.feature__item--2 {
   background-image: url("https://images.pexels.com/photos/5077067/pexels-photo-5077067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center;
   background-repeat: no-repeat;
@@ -181,8 +190,35 @@ body {
 
 .feature__item--1 h2 {
   position: absolute;
+  font-size: 4rem;
   right: 5%;
+  bottom: 5%;
+  color: black;
+}
+
+.feature__item--2 h2 {
   color: white;
+}
+
+.feature__item--3 {
+  background-image: url('https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.feature__item--3 h2 {
+  position: relative;
+  top: 70%;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.feature__item--3 a {
+  position: relative;
+  top: 70%;
+  left: -1%;
+  font-size: 1.75rem;
 }
 
 #covid-notification * {
